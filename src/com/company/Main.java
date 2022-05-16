@@ -14,6 +14,7 @@ public class Main {
         name.displayItemMenu();
         int item_id = name.enterItemId();
 
+
 //_____________________________________________________________________________________________________________________
         //ARRAY ITEM PRICE CLASS
 
