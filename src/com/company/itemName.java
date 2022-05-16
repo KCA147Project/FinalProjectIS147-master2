@@ -4,7 +4,7 @@ import java.util.*;
 
 public class itemName {
     public void displayItemMenu() {
-        System.out.println("Enter the item numbers you would like to purchase: ");
+        System.out.println("Enter the item number you would like to purchase: ");
         System.out.println("----------------------------------------");
 
         System.out.println("ELECTRONICS:");

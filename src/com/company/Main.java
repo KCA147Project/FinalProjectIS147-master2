@@ -14,12 +14,17 @@ public class Main {
         name.displayItemMenu();
         int item_id = name.enterItemId();
 
+        itemPrice input = new itemPrice();
+        byte quant1 = input.itemQuantity();
+
+
+
 
 //_____________________________________________________________________________________________________________________
         //ARRAY ITEM PRICE CLASS
 
         itemPrice thePrice = new itemPrice();
-        double subtotal = thePrice.getItemPrice(item_id);
+        double subtotal = (thePrice.getItemPrice(item_id) * quant1);
         double finalPrice;
 
 
@@ -38,7 +43,7 @@ public class Main {
 
         Receipt table = new Receipt();
         table.receiptTable();
-        System.out.println("          " + fmt1.format(subtotal) + "      " + fmt2.format(taxRate) + "     " + fmt1.format(finalPrice));
+        System.out.println("    " + fmt1.format(subtotal) + "          "+ quant1 + "         " + fmt2.format(taxRate) + "      " + fmt1.format(finalPrice));
 
         Receipt end = new Receipt();
         end.receiptEnd();
