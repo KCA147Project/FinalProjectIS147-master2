@@ -1,14 +1,12 @@
 package com.company;
 
-
 import java.text.NumberFormat;
 
 public class Main {
 
     public static void main(String[] args) {
-        NumberFormat fmt1 = NumberFormat.getCurrencyInstance ();
-        NumberFormat fmt2 = NumberFormat.getPercentInstance ();
-
+        NumberFormat fmt1 = NumberFormat.getCurrencyInstance();
+        NumberFormat fmt2 = NumberFormat.getPercentInstance();
 
 //_____________________________________________________________________________________________________________________
         //ARRAY ITEM NAME CLASS
@@ -19,26 +17,17 @@ public class Main {
 //_____________________________________________________________________________________________________________________
         //ARRAY ITEM PRICE CLASS
 
-        //ArrayList<String>itemPrice = new ArrayList();
         itemPrice thePrice = new itemPrice();
-        double itemprice = thePrice.getItemPrice(item_id);
-        double mainPrice = thePrice.getItemPrice(item_id);
-
-
-        //System.out.println(fmt1.format(itemprice));
+        double subtotal = thePrice.getItemPrice(item_id);
+        double finalPrice;
 
 
         StateTaxes taxObject = new StateTaxes();
         String state = taxObject.getLocation();
         double taxRate = taxObject.getTax(state);
 
-        //System.out.println(taxRate);
 
-
-        itemprice += itemprice * taxRate;
-
-
-
+        finalPrice = (subtotal * taxRate) + subtotal;
 
 //_____________________________________________________________________________________________________________________
         //OUTPUT
@@ -48,56 +37,14 @@ public class Main {
 
         Receipt table = new Receipt();
         table.receiptTable();
-        System.out.println("          " + fmt1.format(mainPrice) + "      " + fmt2.format (taxRate) + "     " + fmt1.format (itemprice));
+        System.out.println("          " + fmt1.format(subtotal) + "      " + fmt2.format(taxRate) + "     " + fmt1.format(finalPrice));
+
+        Receipt end = new Receipt();
+        end.receiptEnd();
+
+        Receipt survey = new Receipt();
+        survey.receiptSurvey();
 
 
-/*
-//_____________________________________________________________________________________________________________________
-        //OUTPUT
-
-
-
-        System.out.println ("\n" + line2);
-
-        System.out.println("              Atkinson Shields \n              Stine & Partners");
-        System.out.println("\n               Store # 094254");
-        System.out.println("       1000 Hilltop Cir ITE Building \n     Baltimore MD 21250" + " (410) 455-1000");
-        System.out.println(dtf.format(now) +" | " + "EMPLOYEE ID: " + value2 );
-        //System.out.println("\n");
-
-        System.out.println ("\nState: "   ); //STATE
-        System.out.printf ("State Tax: " + "%.2f%%\n", Maryland); //STATE TAX
-
-        System.out.println ("\n" + line);
-        System.out.println(tableHeader.get(0) + "  |  " + tableHeader.get(1) + "  |  " + tableHeader.get(2)+ "  |  " + tableHeader.get(3));
-        System.out.println("====" +  "     " + "===" +  "     " + "=====" +  "     " + "=====");
-
-        System.out.println(firstTotal + "      " + item1);
-        System.out.println(secondTotal + "  " + item2);
-        System.out.println(thirdTotal + "  " + item3);
-        System.out.println(fourthTotal + "  " + item4);
-        System.out.println(fifthTotal + "  " + item5);
-        System.out.println(sixthTotal + "  " + item6);
-
-
-        System.out.println ("SUBTOTAL:         " + fmt1.format (itemprice)); //SUBTOTAL
-
-        System.out.println ("TAX:          " + fmt1.format (tax)); //TAX PAID
-
-        System.out.println ("Total:             " + fmt1.format (totalCost)); //TOTAL WITH TAX CALCULATED
-
-        System.out.println (line);
-
-        System.out.println(itemList.get(0) + "       " + fmt1.format(itemprice[0]));
-        System.out.println(itemList.get(18) + "       " + fmt1.format(itemprice[18]));
-*/
     }
 }
-
-/*
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy | HH:mm:ss");
-        LocalDateTime now = LocalDateTime.now();
-
-        String line = new String(new char[48]).replace('\0', '_');
-        String line2 = new String(new char[48]).replace('\0', '*');
- */

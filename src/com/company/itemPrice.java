@@ -1,8 +1,5 @@
 package com.company;
 
-import java.text.NumberFormat;
-import java.util.Scanner;
-
 public class itemPrice {
     public double getItemPrice(int item_id)
     {
