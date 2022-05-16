@@ -27,12 +27,13 @@ DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
                 tableHeader.add("SUBTOTAL"); //0
         tableHeader.add("QUANTITY");//1
         tableHeader.add("TAX"); //2
-        tableHeader.add("TOTAL"); //3
+        tableHeader.add("TAX PRICE"); //3
+        tableHeader.add("TOTAL"); //4
 
 
         System.out.println ("\n" + line);
-        System.out.println("    " + tableHeader.get(0) + "  |  " + tableHeader.get(1) + "  |  " + tableHeader.get(2)+ "  |  " + tableHeader.get(3));
-        System.out.println("    "+"========" +  "     " + "========" +  "     " + "===" +  "     " + "=====");
+        System.out.println(tableHeader.get(0) + " | " + tableHeader.get(1) + " | " + tableHeader.get(2)+ " | " + tableHeader.get(3) + " | " + tableHeader.get(4));
+        System.out.println("========" +  "   " + "========" +  "   " + "===" +  "   " + "========="+  "   " + "=====");
 
     }
 

@@ -31,6 +31,7 @@ public class Main {
         StateTaxes taxObject = new StateTaxes();
         String state = taxObject.getLocation();
         double taxRate = taxObject.getTax(state);
+        double taxPrice = (subtotal * taxRate);
 
 
         finalPrice = (subtotal * taxRate) + subtotal;
@@ -43,7 +44,7 @@ public class Main {
 
         Receipt table = new Receipt();
         table.receiptTable();
-        System.out.println("    " + fmt1.format(subtotal) + "          "+ quant1 + "         " + fmt2.format(taxRate) + "      " + fmt1.format(finalPrice));
+        System.out.println(fmt1.format(subtotal) + "        "+ quant1 + "       " + fmt2.format(taxRate) + "     " + fmt1.format(taxPrice)+ "     " + fmt1.format(finalPrice));
 
         Receipt end = new Receipt();
         end.receiptEnd();
