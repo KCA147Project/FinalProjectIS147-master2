@@ -37,18 +37,18 @@ DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
 
     public void receiptEnd(){
         System.out.println ("\n" + line);
-        System.out.println("            THANK YOU FOR SHOPPING");
+        System.out.println("              THANK YOU FOR SHOPPING");
         System.out.println("      FOR DETAILS ON OUR RETURN POLICY, VISIT");
-        System.out.println("                IS147.COM/RETURNS");
+        System.out.println("                 IS147.COM/RETURNS");
         System.out.println("A WRITTEN COPY OF THE RETURN POLICY IS AVAILABLE");
-        System.out.println("         AT OUR CUSTOMER SERVICE DESK");
+        System.out.println("          AT OUR CUSTOMER SERVICE DESK");
     }
 
     public void receiptSurvey(){
         System.out.println ("\n" + line2);
         System.out.println("*                                              *");
         System.out.println("*                                              *");
-        System.out.println("*             SHARE YOUR FEEDBACK              *");
+        System.out.println("*              SHARE YOUR FEEDBACK             *");
         System.out.println("*           ENTER FOR A CHANCE TO BE           *");
         System.out.println("*    ONE OF FIVE $500 WINNERS DRAWN MONTHLY!   *");
         System.out.println("*                                              *");
